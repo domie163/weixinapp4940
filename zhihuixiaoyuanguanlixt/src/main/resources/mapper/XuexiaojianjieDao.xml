@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.XuexiaojianjieDao">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        a.id as id
+        ,a.xuexiaojianjie_name as xuexiaojianjieName
+        ,a.xuexiaojianjie_types as xuexiaojianjieTypes
+        ,a.xuexiaojianjie_photo as xuexiaojianjiePhoto
+        ,a.insert_time as insertTime
+        ,a.xuexiaojianjie_content as xuexiaojianjieContent
+        ,a.create_time as createTime
+    </sql>
+    <select id="selectListView" parameterType="map" resultType="com.entity.view.XuexiaojianjieView" >
+        SELECT
+        <include refid="Base_Column_List" />
+        <!-- 级联表的字段 -->
+
+        FROM xuexiaojianjie  a
+
+        <where>
+            <if test="params.ids != null">
+                and a.id in
+                <foreach item="item" index="index" collection="params.ids" open="(" separator="," close=")">
+                #{item}
+                </foreach>
+            </if>
+            <if test=" params.xuexiaojianjieName != '' and params.xuexiaojianjieName != null and params.xuexiaojianjieName != 'null' ">
+                and a.xuexiaojianjie_name like CONCAT('%',#{params.xuexiaojianjieName},'%')
+            </if>
+            <if test="params.xuexiaojianjieTypes != null and params.xuexiaojianjieTypes != ''">
+                and a.xuexiaojianjie_types = #{params.xuexiaojianjieTypes}
+            </if>
+            <if test=" params.insertTimeStart != '' and params.insertTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.insert_time) >= UNIX_TIMESTAMP(#{params.insertTimeStart}) ]]>
+            </if>
+            <if test=" params.insertTimeEnd != '' and params.insertTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.insert_time) <= UNIX_TIMESTAMP(#{params.insertTimeEnd}) ]]>
+            </if>
+            <if test=" params.xuexiaojianjieContent != '' and params.xuexiaojianjieContent != null and params.xuexiaojianjieContent != 'null' ">
+                and a.xuexiaojianjie_content like CONCAT('%',#{params.xuexiaojianjieContent},'%')
+            </if>
+
+        </where>
+        order by a.${params.sort} ${params.order}
+    </select>
+
+</mapper>

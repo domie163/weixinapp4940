@@ -1,0 +1,595 @@
+{
+	"pages": [{
+		"path": "pages/login/login",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "登录"
+		}
+	},{
+		"path": "pages/register/register",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "注册"
+		}
+	},{
+		"path": "pages/forget/forget",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "忘记密码"
+		}
+	},{
+		"path": "pages/center/center",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的"
+		}
+	},{
+		"path": "pages/user-info/userinfo",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "用户信息"
+		}
+	}
+
+	,{
+		"path": "pages/chat/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "意见反馈展示"
+		}
+	},{
+		"path": "pages/chat/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的意见反馈"
+		}
+	},{
+		"path": "pages/chat/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "意见反馈添加/修改"
+		}
+	},{
+		"path": "pages/chat/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "意见反馈详情"
+		}
+	}
+	,{
+		"path": "pages/exampapertopic/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "试卷选题展示"
+		}
+	},{
+		"path": "pages/exampapertopic/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的试卷选题"
+		}
+	},{
+		"path": "pages/exampapertopic/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "试卷选题添加/修改"
+		}
+	},{
+		"path": "pages/exampapertopic/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "试卷选题详情"
+		}
+	}
+       ,{
+		"path": "pages/forum/forum-index",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "全部发帖"
+		}
+	},{
+		"path": "pages/forum/forum-detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "发帖详情"
+		}
+	},{
+		"path": "pages/forum/forum-my",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的发帖"
+		}
+	},{
+		"path": "pages/forum/forum-add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "发贴(修改/新增)"
+		}
+	}
+	,{
+		"path": "pages/jiaoshi/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教师信息展示"
+		}
+	},{
+		"path": "pages/jiaoshi/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的教师信息"
+		}
+	},{
+		"path": "pages/jiaoshi/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教师信息添加/修改"
+		}
+	},{
+		"path": "pages/jiaoshi/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教师信息详情"
+		}
+	}
+	,{
+		"path": "pages/kecheng/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "课程信息展示"
+		}
+	},{
+		"path": "pages/kecheng/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的课程信息"
+		}
+	},{
+		"path": "pages/kecheng/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "课程信息添加/修改"
+		}
+	},{
+		"path": "pages/kecheng/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "课程信息详情"
+		}
+	}
+	,{
+		"path": "pages/kechengCollection/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "课程收藏展示"
+		}
+	},{
+		"path": "pages/kechengCollection/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的课程收藏"
+		}
+	},{
+		"path": "pages/kechengCollection/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "课程收藏添加/修改"
+		}
+	},{
+		"path": "pages/kechengCollection/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "课程收藏详情"
+		}
+	}
+	,{
+		"path": "pages/kechengLiuyan/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "课程留言展示"
+		}
+	},{
+		"path": "pages/kechengLiuyan/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的课程留言"
+		}
+	},{
+		"path": "pages/kechengLiuyan/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "课程留言添加/修改"
+		}
+	},{
+		"path": "pages/kechengLiuyan/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "课程留言详情"
+		}
+	}
+	,{
+		"path": "pages/news/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "公告信息展示"
+		}
+	},{
+		"path": "pages/news/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的公告信息"
+		}
+	},{
+		"path": "pages/news/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "公告信息添加/修改"
+		}
+	},{
+		"path": "pages/news/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "公告信息详情"
+		}
+	}
+	,{
+		"path": "pages/tongxunlu/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "通讯录展示"
+		}
+	},{
+		"path": "pages/tongxunlu/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的通讯录"
+		}
+	},{
+		"path": "pages/tongxunlu/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "通讯录添加/修改"
+		}
+	},{
+		"path": "pages/tongxunlu/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "通讯录详情"
+		}
+	}
+	,{
+		"path": "pages/tongzhi/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "通知信息展示"
+		}
+	},{
+		"path": "pages/tongzhi/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的通知信息"
+		}
+	},{
+		"path": "pages/tongzhi/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "通知信息添加/修改"
+		}
+	},{
+		"path": "pages/tongzhi/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "通知信息详情"
+		}
+	}
+	,{
+		"path": "pages/xuexiaojianjie/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学校简介展示"
+		}
+	},{
+		"path": "pages/xuexiaojianjie/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的学校简介"
+		}
+	},{
+		"path": "pages/xuexiaojianjie/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学校简介添加/修改"
+		}
+	},{
+		"path": "pages/xuexiaojianjie/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学校简介详情"
+		}
+	}
+	,{
+		"path": "pages/yonghu/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生展示"
+		}
+	},{
+		"path": "pages/yonghu/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的学生"
+		}
+	},{
+		"path": "pages/yonghu/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生添加/修改"
+		}
+	},{
+		"path": "pages/yonghu/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生详情"
+		}
+	}
+	,{
+		"path": "pages/yonghuKaoqin/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生考勤展示"
+		}
+	},{
+		"path": "pages/yonghuKaoqin/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的学生考勤"
+		}
+	},{
+		"path": "pages/yonghuKaoqin/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生考勤添加/修改"
+		}
+	},{
+		"path": "pages/yonghuKaoqin/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生考勤详情"
+		}
+	}
+	,{
+		"path": "pages/yonghuKaoqinList/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生考勤详情展示"
+		}
+	},{
+		"path": "pages/yonghuKaoqinList/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的学生考勤详情"
+		}
+	},{
+		"path": "pages/yonghuKaoqinList/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生考勤详情添加/修改"
+		}
+	},{
+		"path": "pages/yonghuKaoqinList/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生考勤详情详情"
+		}
+	}
+	,{
+		"path": "pages/yonghuqingjia/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生请假展示"
+		}
+	},{
+		"path": "pages/yonghuqingjia/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的学生请假"
+		}
+	},{
+		"path": "pages/yonghuqingjia/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生请假添加/修改"
+		}
+	},{
+		"path": "pages/yonghuqingjia/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学生请假详情"
+		}
+	}
+	,{
+		"path": "pages/zuoye/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "作业展示"
+		}
+	},{
+		"path": "pages/zuoye/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的作业"
+		}
+	},{
+		"path": "pages/zuoye/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "作业添加/修改"
+		}
+	},{
+		"path": "pages/zuoye/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "作业详情"
+		}
+	}
+	,{
+		"path": "pages/exampaper/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "试卷列表"
+		}
+	},{
+		"path": "pages/exampaper/exam",
+		"style": {
+			"navigationStyle": "custom"
+		}
+	},{
+		"path": "pages/examrecord/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "考试记录"
+		}
+	},{
+		"path": "pages/examrecord/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "考试记录"
+		}
+	},{
+		"path": "pages/examrewrongquestion/list",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "错题本"
+		}
+	}
+			,{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarBackgroundColor": "#93a5cf",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "智慧校园管理系统首页"
+		}
+	}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "智慧校园管理系统",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#FFFFFF",
+		"selectedColor": "#fff",
+		"borderStyle": "black",
+		"backgroundColor": "#29ce87",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabs/index.png",
+				"selectedIconPath": "static/tabs/index1.png",
+				"text": "首页"
+			}
+			,{
+				"pagePath": "pages/exampaper/list",
+				"iconPath": "static/tabs/type.png",
+				"selectedIconPath": "static/tabs/type1.png",
+				"text": "试卷表"
+			}
+			,{
+				"pagePath": "pages/kecheng/list",
+				"iconPath": "static/tabs/type.png",
+				"selectedIconPath": "static/tabs/type1.png",
+				"text": "课程信息"
+			}
+			,{
+			 	"pagePath": "pages/forum/forum-index",
+				"iconPath": "static/tabs/order.png",
+			 	"selectedIconPath": "static/tabs/order1.png",
+				"text": "论坛"
+			}
+			,{
+				"pagePath": "pages/center/center",
+				"iconPath": "static/tabs/mine.png",
+				"selectedIconPath": "static/tabs/mine1.png",
+				"text": "我的"
+			}
+		]
+	}
+	// "permission": {
+	// 	"scope.userLocation": {
+	// 		"desc": ""
+	// 	}
+	// },
+	// "requiredPrivateInfos": ["getLocation", "chooseLocation"]
+}

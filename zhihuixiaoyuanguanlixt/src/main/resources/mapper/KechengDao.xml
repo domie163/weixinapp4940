@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.KechengDao">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        a.id as id
+        ,a.kecheng_name as kechengName
+        ,a.kecheng_types as kechengTypes
+        ,a.kecheng_photo as kechengPhoto
+        ,a.kecheng_video as kechengVideo
+        ,a.kecheng_file as kechengFile
+        ,a.kemu_types as kemuTypes
+        ,a.banji_types as banjiTypes
+        ,a.jiaoshi_id as jiaoshiId
+        ,a.kecheng_content as kechengContent
+        ,a.kecheng_delete as kechengDelete
+        ,a.insert_time as insertTime
+        ,a.create_time as createTime
+    </sql>
+    <select id="selectListView" parameterType="map" resultType="com.entity.view.KechengView" >
+        SELECT
+        <include refid="Base_Column_List" />
+        <!-- 级联表的字段 -->
+        ,jiaoshi.jiaoshi_name as jiaoshiName
+        ,jiaoshi.jiaoshi_types as jiaoshiTypes
+        ,jiaoshi.jiaoshi_photo as jiaoshiPhoto
+        ,jiaoshi.jiaoshi_phone as jiaoshiPhone
+        ,jiaoshi.jiaoshi_shichang as jiaoshiShichang
+        ,jiaoshi.jiaoshi_content as jiaoshiContent
+        ,jiaoshi.jiaoshi_delete as jiaoshiDelete
+
+        FROM kecheng  a
+        left JOIN jiaoshi jiaoshi ON a.jiaoshi_id = jiaoshi.id
+
+        <where>
+            <if test="params.ids != null">
+                and a.id in
+                <foreach item="item" index="index" collection="params.ids" open="(" separator="," close=")">
+                #{item}
+                </foreach>
+            </if>
+            <if test=" params.kechengName != '' and params.kechengName != null and params.kechengName != 'null' ">
+                and a.kecheng_name like CONCAT('%',#{params.kechengName},'%')
+            </if>
+            <if test="params.kechengTypes != null and params.kechengTypes != ''">
+                and a.kecheng_types = #{params.kechengTypes}
+            </if>
+            <if test=" params.kechengVideo != '' and params.kechengVideo != null and params.kechengVideo != 'null' ">
+                and a.kecheng_video like CONCAT('%',#{params.kechengVideo},'%')
+            </if>
+            <if test="params.kemuTypes != null and params.kemuTypes != ''">
+                and a.kemu_types = #{params.kemuTypes}
+            </if>
+            <if test="params.banjiTypes != null and params.banjiTypes != ''">
+                and a.banji_types = #{params.banjiTypes}
+            </if>
+            <if test="params.jiaoshiId != null and params.jiaoshiId != ''">
+                and (
+                    a.jiaoshi_id = #{params.jiaoshiId}
+                )
+            </if>
+            <if test=" params.kechengContent != '' and params.kechengContent != null and params.kechengContent != 'null' ">
+                and a.kecheng_content like CONCAT('%',#{params.kechengContent},'%')
+            </if>
+            <if test="params.kechengDeleteStart != null and params.kechengDeleteStart != ''">
+                <![CDATA[  and a.kecheng_delete >= #{params.kechengDeleteStart}   ]]>
+            </if>
+            <if test="params.kechengDeleteEnd != null and params.kechengDeleteEnd != ''">
+                <![CDATA[  and a.kecheng_delete <= #{params.kechengDeleteEnd}   ]]>
+            </if>
+             <if test="params.kechengDelete != null and params.kechengDelete != ''">
+                and a.kecheng_delete = #{params.kechengDelete}
+             </if>
+            <if test=" params.insertTimeStart != '' and params.insertTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.insert_time) >= UNIX_TIMESTAMP(#{params.insertTimeStart}) ]]>
+            </if>
+            <if test=" params.insertTimeEnd != '' and params.insertTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.insert_time) <= UNIX_TIMESTAMP(#{params.insertTimeEnd}) ]]>
+            </if>
+
+                <!-- 判断教师信息的id不为空 -->
+            <if test=" params.jiaoshiIdNotNull != '' and params.jiaoshiIdNotNull != null and params.jiaoshiIdNotNull != 'null' ">
+                and a.jiaoshi_id IS NOT NULL
+            </if>
+            <if test=" params.jiaoshiName != '' and params.jiaoshiName != null and params.jiaoshiName != 'null' ">
+                and jiaoshi.jiaoshi_name like CONCAT('%',#{params.jiaoshiName},'%')
+            </if>
+            <if test="params.jiaoshiTypes != null  and params.jiaoshiTypes != ''">
+                and jiaoshi.jiaoshi_types = #{params.jiaoshiTypes}
+            </if>
+
+            <if test=" params.jiaoshiPhone != '' and params.jiaoshiPhone != null and params.jiaoshiPhone != 'null' ">
+                and jiaoshi.jiaoshi_phone like CONCAT('%',#{params.jiaoshiPhone},'%')
+            </if>
+            <if test=" params.jiaoshiShichang != '' and params.jiaoshiShichang != null and params.jiaoshiShichang != 'null' ">
+                and jiaoshi.jiaoshi_shichang like CONCAT('%',#{params.jiaoshiShichang},'%')
+            </if>
+            <if test=" params.jiaoshiContent != '' and params.jiaoshiContent != null and params.jiaoshiContent != 'null' ">
+                and jiaoshi.jiaoshi_content like CONCAT('%',#{params.jiaoshiContent},'%')
+            </if>
+            <if test="params.jiaoshiDeleteStart != null  and params.jiaoshiDeleteStart != '' ">
+                <![CDATA[  and jiaoshi.jiaoshi_delete >= #{params.jiaoshiDeleteStart}   ]]>
+            </if>
+            <if test="params.jiaoshiDeleteEnd != null  and params.jiaoshiDeleteEnd != '' ">
+                <![CDATA[  and jiaoshi.jiaoshi_delete <= #{params.jiaoshiDeleteEnd}   ]]>
+            </if>
+            <if test="params.jiaoshiDelete != null  and params.jiaoshiDelete != '' ">
+                and jiaoshi.jiaoshi_delete = #{params.jiaoshiDelete}
+            </if>
+            <if test=" params.insertTimeStart != '' and params.insertTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(jiaoshi.insert_time) >= UNIX_TIMESTAMP(#{params.insertTimeStart}) ]]>
+            </if>
+            <if test=" params.insertTimeEnd != '' and params.insertTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(jiaoshi.insert_time) <= UNIX_TIMESTAMP(#{params.insertTimeEnd}) ]]>
+            </if>
+        </where>
+        order by a.${params.sort} ${params.order}
+    </select>
+
+</mapper>
